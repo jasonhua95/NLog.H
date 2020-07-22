@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.H", "NLog.H.csproj", "{AA5D18D0-8196-4F3A-A961-956D0D1E0BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.HTest", "..\NLog.HTest\NLog.HTest.csproj", "{5D077A0C-7515-4737-9E2D-5C9D84D42E98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA5D18D0-8196-4F3A-A961-956D0D1E0BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5D18D0-8196-4F3A-A961-956D0D1E0BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5D18D0-8196-4F3A-A961-956D0D1E0BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5D18D0-8196-4F3A-A961-956D0D1E0BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D077A0C-7515-4737-9E2D-5C9D84D42E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D077A0C-7515-4737-9E2D-5C9D84D42E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D077A0C-7515-4737-9E2D-5C9D84D42E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D077A0C-7515-4737-9E2D-5C9D84D42E98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB8D4308-223B-473B-BC77-F21FA9ACC72A}
+	EndGlobalSection
+EndGlobal
