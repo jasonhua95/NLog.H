@@ -9,12 +9,12 @@ Log.Error("Error");
 Create nlog.config (lowercase all) file in the root of your project.
 
  ```
- <?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       autoReload="true"
       internalLogLevel="Info"
-      internalLogFile="E:\VS2019\NLog.HTest\log\internal-nlog.log">
+      internalLogFile="internal-nlog.log">
 
   <!-- enable asp.net core layout renderers -->
   <!--<extensions>
@@ -24,9 +24,9 @@ Create nlog.config (lowercase all) file in the root of your project.
   <!-- the targets to write to -->
   <targets>
     <!-- write logs to file  -->
-    <target xsi:type="File" name="allfile" fileName="E:\VS2019\NLog.HTest\log\nlog-all-${shortdate}.log"
+    <target xsi:type="File" name="allfile" fileName="nlog-all-${shortdate}.log"
             layout="${longdate}|${event-properties:item=EventId_Id}|${uppercase:${level}}|${logger}|${message} ${exception:format=tostring}" />
-
+    <target name="logconsole" xsi:type="Console" />
     <!-- another file log, only own logs. Uses some ASP.NET core renderers -->
     <!--<target xsi:type="File" name="ownFile-web" fileName="E:\GitPublic\GithubWeb\GithubTest\log\nlog-own-${shortdate}.log"
             layout="${longdate}|${event-properties:item=EventId_Id}|${uppercase:${level}}|${logger}|${message} ${exception:format=tostring}|url: ${aspnet-request-url}|action: ${aspnet-mvc-action}" />-->
@@ -34,6 +34,7 @@ Create nlog.config (lowercase all) file in the root of your project.
 
   <!-- rules to map from logger name to target -->
   <rules>
+    <logger name="*" minlevel="Info" writeTo="logconsole" />
     <!--All logs, including from Microsoft-->
     <logger name="*" minlevel="Trace" writeTo="allfile" />
 
